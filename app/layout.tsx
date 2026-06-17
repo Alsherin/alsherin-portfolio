@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
-import "@fontsource/jetbrains-mono";
+
+const jetbrains = JetBrains_Mono({
+  subsets: ["latin"],
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,11 +16,11 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Alsherin Rajan | Product Manager Portfolio",
 
   description:
-    "Product Manager portfolio showcasing AI products, market research and demand generation initiatives.",
+    "Product Manager portfolio showcasing AI products, market research, demand generation strategies and product thinking.",
 
   openGraph: {
     title: "Alsherin Rajan | Product Manager Portfolio",
@@ -31,6 +34,10 @@ export const metadata = {
 
     type: "website",
   },
+
+  icons: {
+    icon: "/favicon.jpeg",
+  },
 };
 
 export default function RootLayout({
@@ -43,7 +50,9 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className={jetbrains.className}>
+        {children}
+      </body>
     </html>
   );
 }
