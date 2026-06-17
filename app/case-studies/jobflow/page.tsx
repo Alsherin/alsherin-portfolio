@@ -17,7 +17,7 @@ export default function Jobflow() {
           marginBottom: "20px",
         }}
       >
-        CASE STUDY 02
+        case study 02
       </p>
 
       <h1
