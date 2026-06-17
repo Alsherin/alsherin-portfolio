@@ -1,79 +1,266 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
+
+const projects = [
+  {
+    title: "01_decision_buddy",
+    href: "/case-studies/decision-buddy",
+    description: "Decision Buddy: An AI Decision making tool",
+  },
+  {
+    title: "02_jobflow",
+    href: "/case-studies/jobflow",
+    description: "JobFlow: Chrome Extension for Job Tracking",
+  },
+  {
+    title: "03_mena_market_study",
+    href: "/case-studies/mena-market-study",
+    description: "MENA Market Study: SaaS & Digital Products Opportunity (GCC Focus)",
+  },
+  {
+  title: "04_gitex_booth",
+  href: "/case-studies/gitex-booth",
+  description: "Event strategy & demand generation funnel"
+  },
+];
+
+const skills = [
+  "Product Strategy",
+  "User Research",
+  "Product Marketing",
+  "Go-To-Market",
+  "AI Prototyping",
+  "Vibe Coding",
+  "Analytics",
+  "Experimentation",
+  "Customer Insights",
+  "Figma",
+  "Python",
+  "Streamlit",
+  "SQL",
+];
 
 export default function Home() {
   return (
-    <main className="bg-black text-white min-h-screen">
+    <main className="min-h-screen">
 
-      <section className="h-screen flex flex-col justify-center px-10 md:px-24">
-        <motion.p
+      <nav className="navbar">
+  <a href="/">home</a>
+  {" "}
+  <a href="#about">about</a>
+  {" "}
+  <a href="#skills">skills</a>
+  {" "}
+  <a href="#projects">projects</a>
+  {" "}
+  <a href="#contact">contact</a>
+  {" "}
+
+    <a
+    href="https://github.com/ALSHERIN"
+    target="_blank"
+    className="github-link"
+  >
+    GitHub ↗
+    {" "}
+  </a>
+
+</nav>
+
+      <div className="max-w-4xl mx-auto px-8">
+
+        {/* HERO */}
+
+<div className="hero-content">
+
+  <p
+        style={{
+          color: "#64ffda",
+          letterSpacing: "4px",
+          marginBottom: "20px",
+        }}
+      >
+       
+      </p>
+
+      <h1 className="hero-name">
+        hi, alsherin rajan here!
+      </h1>
+
+
+
+  <motion.h2
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ delay: 0.2 }}
+    className="hero-subtitle"
+  >
+    engineering → marketing → product management
+  </motion.h2>
+
+  <motion.p
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    transition={{ delay: 0.4 }}
+    className="hero-description"
+  >
+    Building AI tools, productivity products and
+    user experiences through experimentation,
+    research and storytelling.
+  </motion.p>
+
+</div>
+
+        {/* ABOUT */}
+
+        <motion.section
+          id="about"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="section"
+        >
+
+          <p className="terminal-command">
+            /about
+          </p>
+
+          <div className="content-block">
+
+            <p>
+              An engineer-turned-marketer with 4+ years of B2B experience, 
+              leading end-to-end regional marketing campaigns across the MENA region.
+            </p>
+
+            <p>
+              I enjoy building lightweight products,
+              validating ideas quickly and improving
+              user experiences through research.
+            </p>
+
+            <p>
+              My long-term goal is to transition into
+              Product Management and build products
+              that solve meaningful user problems.
+            </p>
+
+            <p className="highlight">
+              “Why is this harder than it needs to be?”
+            </p>
+
+          </div>
+
+        </motion.section>
+
+        {/* CASE STUDIES */}
+
+        <motion.section
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+           id="projects"
+          className="section"
         >
-          Hello, I'm
-        </motion.p>
 
-        <motion.h1
-          initial={{ y: 50 }}
-          animate={{ y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-6xl md:text-8xl font-bold"
-        >
-          Alsherin Rajan
-        </motion.h1>
+          <p className="terminal-command">
+            /case studies
+          </p>
 
-        <h2 className="text-2xl mt-4 text-zinc-400">
-          Product Marketer → Product Manager
-        </h2>
+          <div className="project-grid">
 
-        <p className="max-w-xl mt-6 text-zinc-500">
-          Building user-focused products through research,
-          strategy, experimentation and storytelling.
-        </p>
-      </section>
+            {projects.map((project) => (
+              <Link
+                key={project.title}
+                href={project.href}
+              >
+                <motion.div
+                  whileHover={{
+                    y: -6,
+                    scale: 1.02,
+                  }}
+                  className="project-card"
+                >
+                  <h3>{project.title}</h3>
 
-      <section className="px-10 md:px-24 py-40">
-        <h2 className="text-4xl font-bold mb-12">
-          Featured Projects
-        </h2>
+                  <p>
+                    {project.description}
+                  </p>
 
-        <div className="space-y-8">
+                </motion.div>
+              </Link>
+            ))}
 
-          <div className="border border-zinc-800 p-8 rounded-3xl">
-            <h3 className="text-2xl font-semibold">
-              Partner Portal Revamp
-            </h3>
-
-            <p className="text-zinc-400 mt-4">
-              Collaborated with design and engineering teams
-              to improve partner onboarding experience.
-            </p>
           </div>
 
-          <div className="border border-zinc-800 p-8 rounded-3xl">
-            <h3 className="text-2xl font-semibold">
-              Event Experience Platform
-            </h3>
+        </motion.section>
 
-            <p className="text-zinc-400 mt-4">
-              Designed attendee journeys across MENA events.
-            </p>
+        {/* SKILLS */}
+
+        <motion.section
+          initial={{ opacity: 0 }}
+           id="skills"
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="section"
+        >
+
+          <p className="terminal-command">
+            /skills 
+          </p>
+
+          <div className="skills-grid">
+
+            {skills.map((skill) => (
+              <div
+                key={skill}
+                className="skill-card"
+              >
+                {skill}
+              </div>
+            ))}
+
           </div>
 
-        </div>
-      </section>
+        </motion.section>
 
-      <section className="px-10 md:px-24 py-40">
-        <h2 className="text-4xl font-bold mb-8">
-          Contact
-        </h2>
+        {/* CONTACT */}
 
-        <p>
-          LinkedIn • Email • Resume
-        </p>
-      </section>
+        <motion.section
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+           id="contact"
+          className="section"
+        >
+
+          <p className="terminal-command">
+            /contact
+          </p>
+
+          <div className="contact-links">
+
+            <a
+              href="https://www.linkedin.com/in/alsherin-r-72931887/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              LinkedIn
+            </a>
+
+            <a href="mailto:rajanalsherin@gmail.com">
+              Email
+            </a>
+
+          </div>
+
+        </motion.section>
+
+      </div>
 
     </main>
   );
+  
 }
