@@ -127,7 +127,7 @@ export default function Home() {
   className="section-title"
   style={{ marginTop: "80px", marginBottom: "50px" }}
 >
-  /about
+  
 </h2>
 
           <p className="terminal-command">
