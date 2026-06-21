@@ -123,6 +123,12 @@ export default function Home() {
           viewport={{ once: true }}
           className="section"
         >
+          <h2
+  className="section-title"
+  style={{ marginTop: "80px", marginBottom: "50px" }}
+>
+  /about
+</h2>
 
           <p className="terminal-command">
             /about
