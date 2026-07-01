@@ -28,19 +28,19 @@ const projects = [
 ];
 
 const skills = [
-  "Product Strategy",
-  "User Research",
-  "Product Marketing",
-  "Go-To-Market",
-  "AI Prototyping",
-  "Vibe Coding",
-  "Analytics",
-  "Experimentation",
-  "Customer Insights",
-  "Figma",
-  "Python",
-  "Streamlit",
-  "SQL",
+  "product strategy",
+  "user research",
+  "product marketing",
+  "go-to-market",
+  "AI prototyping",
+  "vibe oding",
+  "analytics",
+  "experimentation",
+  "customer insights",
+  "figma",
+  "python",
+  "streamlit",
+  "sql",
 ];
 
 export default function Home() {
@@ -93,13 +93,13 @@ export default function Home() {
 
 
   <motion.h2
-    initial={{ opacity: 0 }}
-    animate={{ opacity: 1 }}
-    transition={{ delay: 0.2 }}
-    className="hero-subtitle"
-  >
-    i build, test and market products.
-  </motion.h2>
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  transition={{ delay: 0.2 }}
+  className="hero-subtitle"
+>
+  i build, test and market products.
+</motion.h2>
 
   {/* <motion.p
     initial={{ opacity: 0 }}
