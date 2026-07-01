@@ -275,6 +275,7 @@ a {
     0 0 5px #64ffda,
     0 0 10px #64ffda,
     0 0 20px rgba(100, 255, 218, 0.8);
+    text-align: center;
 }
 
 .cursor {
