@@ -252,11 +252,11 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              LinkedIn
+              linkedIn
             </a>
 
             <a href="mailto:rajanalsherin@gmail.com">
-              Email
+              email
             </a>
 
           </div>
