@@ -87,7 +87,7 @@ export default function Home() {
       </p>
 
       <h1 className="hero-name">
-        hi, alsherin rajan here!
+        hi, i'm alsherin.
       </h1>
 
 
@@ -98,10 +98,10 @@ export default function Home() {
     transition={{ delay: 0.2 }}
     className="hero-subtitle"
   >
-    engineering → marketing → product management
+    i build, test and market products.
   </motion.h2>
 
-  <motion.p
+  {/* <motion.p
     initial={{ opacity: 0 }}
     animate={{ opacity: 1 }}
     transition={{ delay: 0.4 }}
@@ -110,7 +110,7 @@ export default function Home() {
     Building AI tools, productivity products and
     user experiences through experimentation,
     research and storytelling.
-  </motion.p>
+  </motion.p>*/}
 
 </div>
 
@@ -136,25 +136,24 @@ export default function Home() {
 
           <div className="content-block">
 
+  
+
             <p>
-              An engineer-turned-marketer with 4+ years of B2B experience, 
-              leading end-to-end regional marketing campaigns across the MENA region.
+              i'm curious about products, marketing, and the little 
+              frustrations people accept as "just the way things are."
             </p>
 
             <p>
-              I enjoy building lightweight products,
-              validating ideas quickly and improving
-              user experiences through research.
-            </p>
-
-            <p>
-              My long-term goal is to transition into
-              Product Management and build products
-              that solve meaningful user problems.
+              outside work, you'll usually find me reading, doing yoga or 
+              building small products to solve my own problems. 
+              i enjoy validating ideas quickly, improving user experiences 
+              through research, and asking, "why is this harder than it needs to be?"
             </p>
 
             <p className="highlight">
-              “Why is this harder than it needs to be?”
+              for work, i'm an engineer-turned-marketer with 5 years of B2B marketing experience, 
+              leading regional campaigns across the MENA region. i'm now working toward a career in 
+              product management, where i can build products that solve meaningful user problems.
             </p>
 
           </div>
