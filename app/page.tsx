@@ -91,7 +91,7 @@ export default function Home() {
       </h1>
 
 
-
+{/*}
   <motion.h2
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
@@ -99,7 +99,7 @@ export default function Home() {
   className="hero-subtitle"
 >
   i build, test and market products.
-</motion.h2>
+</motion.h2>*/}
 
   {/* <motion.p
     initial={{ opacity: 0 }}
@@ -130,9 +130,9 @@ export default function Home() {
   
 </h2>
 
-          <p className="terminal-command">
+          {/*<p className="terminal-command">
             /about
-          </p>
+          </p>*/}
 
           <div className="content-block">
 
